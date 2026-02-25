@@ -7,35 +7,35 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com');
-        body { font-family: 'Inter', sans-serif; background-color: #000; }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #000; 
+            margin: 0;
+            padding: 0;
+        }
     </style>
 </head>
-<body class="text-white flex flex-col items-center justify-center min-h-screen p-4">
+<body class="text-white flex flex-col items-center justify-center min-h-screen text-center px-6">
 
-    <!-- Фоновое изображение (замени URL на свою картинку, если нужно) -->
-    <div class="fixed inset-0 z-[-1] opacity-50">
-        <img src="https://static.tildacdn.com" 
-             class="w-full h-full object-cover filter grayscale" alt="background">
-    </div>
-
-    <!-- Контент -->
-    <div class="text-center max-w-lg">
-        <h1 class="text-5xl md:text-7xl font-bold tracking-tighter mb-4 uppercase">
+    <!-- Основной блок -->
+    <div class="flex flex-col items-center">
+        <h1 class="text-6xl md:text-8xl font-bold tracking-tighter mb-2 uppercase italic">
             Dandy
         </h1>
-        <p class="text-lg md:text-xl mb-8 font-light tracking-widest text-gray-300">
-            BARBERSHOP
+        <p class="text-sm md:text-base mb-10 tracking-[0.4em] text-gray-400 uppercase">
+            Barbershop
         </p>
         
+        <!-- Кнопка в стиле iOS / Теплый желток -->
         <a href="https://n109776.alteg.io" 
-           class="inline-block bg-white text-black px-10 py-4 text-sm font-bold uppercase tracking-widest hover:bg-gray-200 transition-all duration-300">
+           class="inline-block bg-[#FFCF40] text-black px-12 py-4 text-base font-semibold rounded-[20px] shadow-lg active:scale-95 transition-all duration-200">
             Записаться онлайн
         </a>
     </div>
 
-    <!-- Футер -->
-    <div class="absolute bottom-8 text-[10px] uppercase tracking-[0.3em] text-gray-500">
-        Professional Grooming • Est. 2024
+    <!-- Футер с правильным годом -->
+    <div class="absolute bottom-10 text-[10px] uppercase tracking-[0.3em] text-gray-600">
+        Professional Grooming • Est. 2014
     </div>
 
 </body>
