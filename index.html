@@ -2,40 +2,56 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Dandy Barbershop</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com');
         body { 
-            font-family: 'Inter', sans-serif; 
-            background-color: #000; 
-            margin: 0;
-            padding: 0;
+            font-family: 'Inter', -apple-system, sans-serif; 
+            background-color: #ffffff; /* Белый фон как в Altegio */
+            -webkit-font-smoothing: antialiased;
+        }
+        /* Тот самый "желток" Altegio */
+        .btn-altegio {
+            background-color: #ffda3b;
+            color: #1c1c1e;
+            transition: all 0.2s ease;
+        }
+        .btn-altegio:active {
+            transform: scale(0.96);
+            background-color: #f2ce35;
         }
     </style>
 </head>
-<body class="text-white flex flex-col items-center justify-center min-h-screen text-center px-6">
+<body class="flex flex-col items-center justify-center min-h-screen overflow-hidden px-6">
 
-    <!-- Основной блок -->
-    <div class="flex flex-col items-center">
-        <h1 class="text-6xl md:text-8xl font-bold tracking-tighter mb-2 uppercase italic">
+    <!-- Контент строго по центру -->
+    <div class="flex flex-col items-center w-full max-w-sm">
+        
+        <!-- Заголовок в стиле премиум-минимализма -->
+        <h1 class="text-[44px] leading-tight font-light tracking-tight text-[#1c1c1e] mb-1 italic">
             Dandy
         </h1>
-        <p class="text-sm md:text-base mb-10 tracking-[0.4em] text-gray-400 uppercase">
+        
+        <p class="text-[12px] uppercase tracking-[0.5em] text-[#8e8e93] mb-12 font-medium">
             Barbershop
         </p>
         
-        <!-- Кнопка в стиле iOS / Теплый желток -->
+        <!-- Кнопка с идеальным скруглением iOS (24px) -->
         <a href="https://n109776.alteg.io" 
-           class="inline-block bg-[#FFCF40] text-black px-12 py-4 text-base font-semibold rounded-[20px] shadow-lg active:scale-95 transition-all duration-200">
+           class="btn-altegio w-full py-4 text-[15px] font-semibold text-center rounded-[18px] shadow-sm">
             Записаться онлайн
         </a>
+
     </div>
 
-    <!-- Футер с правильным годом -->
-    <div class="absolute bottom-10 text-[10px] uppercase tracking-[0.3em] text-gray-600">
-        Professional Grooming • Est. 2014
+    <!-- Футер -->
+    <div class="absolute bottom-12 flex flex-col items-center">
+        <div class="h-[1px] w-8 bg-[#e5e5ea] mb-4"></div>
+        <p class="text-[10px] uppercase tracking-[0.2em] text-[#aeaeb2] font-medium">
+            Est. 2014 • Almaty
+        </p>
     </div>
 
 </body>
