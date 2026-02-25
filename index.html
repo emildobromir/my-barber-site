@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Dandy Barbershop</title>
+    <!-- Ссылка на иконку (бритва) -->
+    <link rel="icon" href="https://img.icons8.com" type="image/png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com" rel="stylesheet">
     <style>
         body { 
             font-family: 'Inter', sans-serif; 
-            background-color: #2b2b2b !important; /* Тот самый теплый графит */
+            background-color: #2b2b2b !important; 
             margin: 0;
             display: flex;
             align-items: center;
             justify-content: center;
-            min-h-screen;
+            min-height: 100vh;
         }
         .btn-altegio {
             background-color: #ffda3b;
@@ -24,11 +26,19 @@
             border: 1px solid rgba(255, 255, 255, 0.3);
             color: #ffffff;
         }
+        /* Фикс для того, чтобы на мобилках ничего не прыгало */
+        .main-container {
+            width: 100%;
+            max-width: 320px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 20px;
+        }
     </style>
 </head>
-<body class="min-h-screen w-full px-8">
+<body class="w-full">
 
-    <div class="flex flex-col items-center w-full max-w-[320px] mx-auto text-center">
+    <div class="main-container">
         
         <!-- Заголовок -->
         <h1 class="text-[56px] font-light tracking-tight text-white mb-0 italic">
@@ -39,15 +49,15 @@
             Barbershop
         </p>
         
-        <!-- Кнопки широкие (iOS Style) -->
+        <!-- Кнопки широкие -->
         <div class="w-full space-y-4 mb-10">
             <a href="https://n109776.alteg.io" 
-               class="btn-altegio block w-full py-4 text-[16px] font-bold rounded-[22px] shadow-lg">
+               class="btn-altegio block w-full py-4 text-[16px] font-bold rounded-[22px] shadow-lg active:scale-95 transition-transform">
                 Записаться онлайн
             </a>
 
             <a href="https://wa.me" 
-               class="btn-outline block w-full py-4 text-[15px] font-medium rounded-[22px]">
+               class="btn-outline block w-full py-4 text-[15px] font-medium rounded-[22px] active:scale-95 transition-transform">
                 WhatsApp
             </a>
         </div>
