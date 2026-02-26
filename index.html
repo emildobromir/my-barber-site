@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Dandy Barbershop</title>
-    <!-- Ссылка на иконку (бритва) -->
     <link rel="icon" href="https://img.icons8.com" type="image/png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com" rel="stylesheet">
@@ -17,7 +16,23 @@
             align-items: center;
             justify-content: center;
             min-height: 100vh;
+            position: relative;
         }
+
+        /* Слой с текстурой шума */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.05; 
+            pointer-events: none;
+            z-index: 1;
+        }
+
         .btn-altegio {
             background-color: #ffda3b;
             color: #1c1c1e;
@@ -26,13 +41,14 @@
             border: 1px solid rgba(255, 255, 255, 0.3);
             color: #ffffff;
         }
-        /* Фикс для того, чтобы на мобилках ничего не прыгало */
         .main-container {
             width: 100%;
             max-width: 320px;
             margin: 0 auto;
             text-align: center;
             padding: 20px;
+            position: relative;
+            z-index: 2; /* Контент поверх текстуры */
         }
     </style>
 </head>
@@ -40,7 +56,6 @@
 
     <div class="main-container">
         
-        <!-- Заголовок -->
         <h1 class="text-[56px] font-light tracking-tight text-white mb-0 italic">
             Dandy
         </h1>
@@ -49,24 +64,22 @@
             Barbershop
         </p>
         
-        <!-- Кнопки широкие -->
         <div class="w-full space-y-4 mb-10">
             <a href="https://n109776.alteg.io" 
                class="btn-altegio block w-full py-4 text-[16px] font-bold rounded-[22px] shadow-lg active:scale-95 transition-transform">
                 Записаться онлайн
             </a>
+
             <a href="https://wa.me/77714499911" 
-   class="btn-outline block w-full py-4 text-[15px] font-medium rounded-[22px] active:scale-95 transition-transform">
-    WhatsApp
-</a>
+               class="btn-outline block w-full py-4 text-[15px] font-medium rounded-[22px] active:scale-95 transition-transform">
+                WhatsApp
+            </a>
         </div>
 
-        <!-- Адрес -->
         <p class="text-[14px] text-gray-200 font-light tracking-wide mb-2">
             Кармысова 30/3
         </p>
 
-        <!-- Футер -->
         <p class="text-[9px] uppercase tracking-[0.3em] text-gray-500 font-medium mt-12">
             Est. 2013 • Almaty
         </p>
