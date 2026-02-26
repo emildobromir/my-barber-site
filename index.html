@@ -4,35 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Dandy Barbershop</title>
+    <!-- Ссылка на иконку (бритва) -->
     <link rel="icon" href="https://img.icons8.com" type="image/png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com" rel="stylesheet">
     <style>
         body { 
             font-family: 'Inter', sans-serif; 
-            /* Добавляем текстуру темного металла/сланца */
-            background: #1a1a1a url('https://www.transparenttextures.com/patterns/dark-matter.png');
-            background-attachment: fixed;
+            background-color: #2b2b2b !important; 
             margin: 0;
             display: flex;
             align-items: center;
             justify-content: center;
             min-height: 100vh;
         }
-        
-        /* Дополнительный слой для глубины цвета как на картинке */
-        body::after {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle, rgba(43,43,43,0.2) 0%, rgba(0,0,0,0.5) 100%);
-            pointer-events: none;
-            z-index: 0;
-        }
-
         .btn-altegio {
             background-color: #ffda3b;
             color: #1c1c1e;
@@ -40,16 +25,14 @@
         .btn-outline {
             border: 1px solid rgba(255, 255, 255, 0.3);
             color: #ffffff;
-            backdrop-filter: blur(2px); /* Чтобы кнопка лучше смотрелась на текстуре */
         }
+        /* Фикс для того, чтобы на мобилках ничего не прыгало */
         .main-container {
             width: 100%;
             max-width: 320px;
             margin: 0 auto;
             text-align: center;
             padding: 20px;
-            position: relative;
-            z-index: 10;
         }
     </style>
 </head>
@@ -57,6 +40,7 @@
 
     <div class="main-container">
         
+        <!-- Заголовок -->
         <h1 class="text-[56px] font-light tracking-tight text-white mb-0 italic">
             Dandy
         </h1>
@@ -65,22 +49,25 @@
             Barbershop
         </p>
         
+        <!-- Кнопки широкие -->
         <div class="w-full space-y-4 mb-10">
             <a href="https://n109776.alteg.io" 
                class="btn-altegio block w-full py-4 text-[16px] font-bold rounded-[22px] shadow-lg active:scale-95 transition-transform">
                 Записаться онлайн
             </a>
 
-            <a href="https://wa.me/77714499911" 
+            <a href="https://wa.me" 
                class="btn-outline block w-full py-4 text-[15px] font-medium rounded-[22px] active:scale-95 transition-transform">
                 WhatsApp
             </a>
         </div>
 
+        <!-- Адрес -->
         <p class="text-[14px] text-gray-200 font-light tracking-wide mb-2">
             Кармысова 30/3
         </p>
 
+        <!-- Футер -->
         <p class="text-[9px] uppercase tracking-[0.3em] text-gray-500 font-medium mt-12">
             Est. 2013 • Almaty
         </p>
